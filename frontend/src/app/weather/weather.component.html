@@ -1,0 +1,37 @@
+<!-- weather.component.html -->
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body text-center">
+            <h1 class="card-title">
+              Weather in {{ city }}, {{ country }}
+            </h1>
+            <span [ngClass]="weatherIcon + ' weather-icon'"></span>
+            <p class="card-text">
+              <strong>Description:</strong> {{ weatherDescription }}
+            </p>
+            <p class="card-text">
+              <strong>Temperature:</strong> {{ temperature }}°C
+            </p><a href=""></a>
+            <p class="card-text">
+              <strong>Humidity:</strong> {{ humidity }}%
+            </p>
+            <p class="card-text">
+              <strong>Wind Speed:</strong> {{ windSpeed }} m/s
+            </p>
+            <p class="card-text">
+              <strong>Pressure:</strong> {{ pressure }}
+            </p>
+  
+            <a href="/" class="btn btn-secondary btn-block">Back</a>
+  
+            <div *ngIf="error" class="alert alert-danger mt-3">
+              <p>Error: {{ error }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
